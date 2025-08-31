@@ -60,7 +60,11 @@ const WeatherCard = () => {
                     navigator.geolocation.getCurrentPosition(
                         pos => resolve(pos.coords),
                         err => reject(err),
-                        { enableHighAccuracy: true, timeout: 5000 }
+                        {
+                            enableHighAccuracy: true, // keep for GPS on mobile
+                            timeout: 15000,           // increase to 15 seconds
+                            maximumAge: 0              // don’t use cached location
+                        }
                     );
                 });
 
