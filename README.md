@@ -20,8 +20,7 @@ A modern **React + Vite** web app to fetch and display current weather based on 
 
 ## Demo
 
-- Development preview in CodeSandbox: *(replace with your URL if available)*  
-- Production URL via Vercel/Netlify: *(replace with your deployed URL)*  
+- Development preview in CodeSandbox: https://wsm88s-3000.csb.app/
 
 ---
 
