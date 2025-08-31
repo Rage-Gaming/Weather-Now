@@ -1,4 +1,3 @@
-import React from 'react'
 import Navbar from './component/Navbar'
 import WeatherCard from './component/WeatherCard'
 import { Toaster } from 'sonner'
