@@ -69,8 +69,8 @@ const WeatherCard = () => {
                     lat = coords.latitude;
                     lon = coords.longitude;
                 } catch (geoError) {
-                    toast.error("Geolocation failed, using IP-based lookup.");
                     // 2. Fallback to IP-based lookup
+                    toast.error("Geolocation failed, using IP-based lookup.");
                     const ipRes = await fetch("https://ipapi.co/json/");
                     const ipData = await ipRes.json();
                     lat = ipData.latitude;
