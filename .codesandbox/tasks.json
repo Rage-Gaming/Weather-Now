@@ -28,6 +28,11 @@
       "name": "preview",
       "command": "pnpm preview",
       "runAtStart": false
+    },
+    "production": {
+      "name":"production",
+      "command": "pnpm run server",
+      "runAtStart": false
     }
   }
 }
