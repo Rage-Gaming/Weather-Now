@@ -55,20 +55,6 @@ const WeatherCard = () => {
       try {
         let lat, lon, city, region, country;
 
-<<<<<<< HEAD
-                // 1. Try Geolocation API first
-                const geoPromise = new Promise((resolve, reject) => {
-                    navigator.geolocation.getCurrentPosition(
-                        pos => resolve(pos.coords),
-                        err => reject(err),
-                        {
-                            enableHighAccuracy: true, // keep for GPS on mobile
-                            timeout: 15000,           // increase to 15 seconds
-                            maximumAge: 0              // don’t use cached location
-                        }
-                    );
-                });
-=======
         // 1️⃣ Try Geolocation API first
         if (navigator.geolocation) {
           const geoPromise = new Promise((resolve, reject) => {
@@ -82,7 +68,6 @@ const WeatherCard = () => {
               }
             );
           });
->>>>>>> df9516bf07387edab84e9a4de94f1a1e92ae30bd
 
           try {
             const coords = await geoPromise;
