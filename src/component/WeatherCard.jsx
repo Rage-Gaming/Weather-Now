@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { MapPin, Droplet, Wind } from "lucide-react";
+import { toast } from 'sonner'
 
 const weatherDescriptions = {
     0: "Clear sky",
@@ -68,6 +69,7 @@ const WeatherCard = () => {
                     lat = coords.latitude;
                     lon = coords.longitude;
                 } catch (geoError) {
+                    toast.error("Geolocation failed, using IP-based lookup.");
                     // 2. Fallback to IP-based lookup
                     const ipRes = await fetch("https://ipapi.co/json/");
                     const ipData = await ipRes.json();
