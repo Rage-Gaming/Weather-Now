@@ -85,7 +85,7 @@ const WeatherCard = () => {
 
         // 2️⃣ Fallback to IP-based lookup if geolocation unavailable
         if (!lat || !lon) {
-          toast.info("Using IP-based location lookup.");
+          // toast.info("Using IP-based location lookup.");
           const ipRes = await fetch("https://ipapi.co/json/");
           const ipData = await ipRes.json();
           lat = ipData.latitude;
