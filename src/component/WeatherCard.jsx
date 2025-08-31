@@ -102,6 +102,7 @@ const WeatherCard = () => {
                 });
             } catch (err) {
                 console.error("Weather fetch failed:", err);
+                toast.error("Failed to fetch weather data. Please try again later.");
             }
         };
 
